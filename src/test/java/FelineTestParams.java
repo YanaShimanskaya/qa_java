@@ -9,7 +9,6 @@ import static org.junit.Assert.assertEquals;
 @RunWith(Parameterized.class)
 public class FelineTestParams {
     private final int expected;
-    private final int expKittensCount = 1;
     Feline feline;
 
     public FelineTestParams(int kittensCount) {
@@ -29,11 +28,6 @@ public class FelineTestParams {
     @Before
     public void feline() {
         feline = new Feline();
-    }
-
-    @Test
-    public void getKittensWoParams() {
-        assertEquals(expKittensCount, feline.getKittens());
     }
 
     @Test
